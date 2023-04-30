@@ -5,8 +5,8 @@ import { Component } from "../interfaces/component.interface";
 const HTML_TEMAPLATE = html`
     <header>
         header
-        <button id="btn-ingresar">
-            Ingresar
+        <button id="btn-theme">
+            Cambiar modo
         </button>
     </header>
 `
@@ -14,9 +14,9 @@ const HTML_TEMAPLATE = html`
 export const headerComponent: Component = {
     template: HTML_TEMAPLATE,
     afterViewInit() {
-        const btnIngresar = this.template.querySelector<HTMLButtonElement>("#btn-ingresar");
-        btnIngresar?.addEventListener("click", () => {
-            alert("Ingresar");
-        })
+        const btnTheme = this.template.querySelector<HTMLButtonElement>("#btn-theme")!;
+        btnTheme.onclick = () => {
+            document.querySelector('html')?.classList.toggle('dark');
+        };
     },
 }
