@@ -25,10 +25,10 @@
     color-scheme: dark;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
     :root {
         --bg-color: var(--zinc-900);
         --text-color: var(--zinc-300);
-        color-scheme: dark;
+        color-scheme: dark; 
     }
-}
+} */

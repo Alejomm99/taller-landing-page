@@ -2,17 +2,17 @@ import { html } from "../helpers/html.helper";
 import { Component } from "../interfaces/component.interface";
 
 
-const HTML_TEMAPLATE = html`
+const template = ()=> html(`
     <header>
         header
         <button id="btn-theme">
             Cambiar modo
         </button>
     </header>
-`
+`);
 
 export const headerComponent: Component = {
-    template: HTML_TEMAPLATE,
+    template: template(),
     afterViewInit() {
         const btnTheme = this.template.querySelector<HTMLButtonElement>("#btn-theme")!;
         btnTheme.onclick = () => {
